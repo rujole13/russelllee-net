@@ -1,0 +1,194 @@
+/* russelllee.net
+   Dark base, one accent, generous measure. Deliberately small so the Phase 7 visual pass
+   on the dashboard has something to match rather than something to fight. */
+
+:root {
+  --bg:        #0b0d0f;
+  --panel:     #12161a;
+  --panel-2:   #171c21;
+  --line:      #232a31;
+  --ink:       #e6ecf2;
+  --ink-dim:   #97a3b0;
+  --ink-faint: #5f6b77;
+  --accent:    #4ee0c1;   /* Hyperliquid-adjacent teal, used sparingly */
+  --measure:   62ch;
+  --radius:    10px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 ui-sans-serif, -apple-system, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+  font-feature-settings: "kern", "liga";
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ---------- chrome ---------- */
+
+header.site,
+footer.site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.15rem clamp(1.25rem, 5vw, 3.5rem);
+}
+
+header.site { border-bottom: 1px solid var(--line); }
+
+footer.site {
+  border-top: 1px solid var(--line);
+  margin-top: auto;
+  color: var(--ink-faint);
+  font-size: 0.875rem;
+}
+
+.wordmark {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+header.site nav,
+footer.site nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+header.site nav a,
+footer.site nav a {
+  color: var(--ink-dim);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+header.site nav a:hover,
+footer.site nav a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+header.site nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- content ---------- */
+
+main {
+  width: 100%;
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 7vw, 5rem) clamp(1.25rem, 5vw, 3.5rem);
+}
+
+.lede { max-width: var(--measure); }
+
+h1 {
+  font-size: clamp(1.75rem, 4.5vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.25rem;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: 1.2rem;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.6rem;
+}
+
+p { color: var(--ink-dim); margin: 0 0 1rem; }
+
+.lede p:first-of-type { color: var(--ink); font-size: 1.05rem; }
+
+/* ---------- project cards ---------- */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1.25rem;
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.card {
+  display: block;
+  padding: 1.6rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.card:hover {
+  background: var(--panel-2);
+  border-color: #2f3944;
+  transform: translateY(-2px);
+}
+
+.card-tag {
+  display: inline-block;
+  font-size: 0.6875rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.85rem;
+}
+
+.card p { font-size: 0.9375rem; margin-bottom: 1.1rem; }
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.meta li {
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+}
+
+/* ---------- placeholder / status pages ---------- */
+
+.status {
+  max-width: var(--measure);
+}
+
+.status code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 0.875em;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 0.1rem 0.4rem;
+  color: var(--ink);
+}
+
+.status ol { color: var(--ink-dim); padding-left: 1.2rem; }
+.status li { margin-bottom: 0.5rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

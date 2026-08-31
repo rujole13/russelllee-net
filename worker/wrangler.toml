@@ -1,0 +1,21 @@
+name = "hype-proxy"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+
+# Both patterns are needed. The bare /hype is what a person types and what the nav links
+# to; /hype/* is every asset and the websocket Streamlit opens underneath it.
+# A Worker route takes precedence over the Pages deployment for matching requests, which
+# is what lets one path on a static site point at a Python server.
+routes = [
+  { pattern = "russelllee.net/hype",   zone_name = "russelllee.net" },
+  { pattern = "russelllee.net/hype/*", zone_name = "russelllee.net" },
+  { pattern = "www.russelllee.net/hype",   zone_name = "russelllee.net" },
+  { pattern = "www.russelllee.net/hype/*", zone_name = "russelllee.net" },
+]
+
+[vars]
+# Replace with the public URL Railway gives the Streamlit service. No trailing slash.
+ORIGIN = "https://REPLACE-ME.up.railway.app"
+
+[observability]
+enabled = true

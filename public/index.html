@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Russell Lee</title>
+<meta name="description" content="Russell Lee — financial engineer. Billing infrastructure, revenue recognition, and the systems underneath them.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="site">
+  <a class="wordmark" href="/">Russell&nbsp;Lee</a>
+  <nav>
+    <a href="/">About</a>
+    <a href="/gas">Gas Hedge</a>
+    <a href="/hype">HYPE Buybacks</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="lede">
+    <h1>I build the systems that produce the numbers.</h1>
+    <p>
+      Senior Financial Engineer. I own billing infrastructure, revenue recognition,
+      accounts receivable and accounting automation across four entities, one of them a
+      regulated broker-dealer. The short version is that I am an accountant who builds
+      the pipelines rather than filing tickets against them.
+    </p>
+    <p>
+      The two projects below are the same instinct applied to things nobody asked me to
+      model. Both publish their methodology. Both show their working.
+    </p>
+  </section>
+
+  <section class="projects">
+
+    <a class="card" href="/hype">
+      <div class="card-tag">Live dashboard</div>
+      <h2>HYPE Buyback Model</h2>
+      <p>
+        Hyperliquid routes trading fees into an automated, price insensitive bid that buys
+        HYPE and burns it. This models how much supply that removes, and what it implies
+        for market cap, from observed fees rather than sentiment.
+      </p>
+      <ul class="meta">
+        <li>Python ingestion</li>
+        <li>BigQuery</li>
+        <li>dbt</li>
+        <li>Streamlit</li>
+      </ul>
+    </a>
+
+    <a class="card" href="/gas">
+      <div class="card-tag">Tracked position</div>
+      <h2>Natural Gas Hedge</h2>
+      <p>
+        Can a household hedge its winter heating cost to zero? Stated methodology, the
+        position marked monthly, and an under-the-hood section explaining every
+        assumption I had to make.
+      </p>
+      <ul class="meta">
+        <li>Methodology</li>
+        <li>Monthly marks</li>
+        <li>Post-mortem</li>
+      </ul>
+    </a>
+
+  </section>
+
+</main>
+
+<footer class="site">
+  <span>Russell Lee</span>
+  <nav>
+    <a href="https://linkedin.com/in/russelllee">LinkedIn</a>
+    <a href="mailto:me@russelllee.net">me@russelllee.net</a>
+  </nav>
+</footer>
+
+</body>
+</html>
