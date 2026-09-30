@@ -19,7 +19,7 @@ for the Worker.
 
 ## Projects it links to
 
-- **HYPE Buyback Model** at `/hype` — [hype-buyback-dashboard](https://github.com/russelllee/hype-buyback-dashboard)
+- **HYPE Buyback Model** at `/hype` — [hype-buyback-dashboard](https://github.com/rujole13/hype-buyback-dashboard)
 - **Natural Gas Hedge** at `/gas` — not started
 
 ## Deploying

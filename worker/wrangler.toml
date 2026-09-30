@@ -15,7 +15,7 @@ routes = [
 
 [vars]
 # Replace with the public URL Railway gives the Streamlit service. No trailing slash.
-ORIGIN = "https://REPLACE-ME.up.railway.app"
+ORIGIN = "https://hype-buyback-dashboard-production.up.railway.app"
 
 [observability]
 enabled = true
