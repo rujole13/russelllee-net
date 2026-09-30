@@ -49,19 +49,22 @@ not need explained.
 Python 3.10+ is a hard requirement. The source probe script in the dashboard repo uses
 `X | None` union syntax that 3.9 cannot parse.
 
-### Deployment: static site done, dashboard/Worker/Railway not started
+### Deployment: fully live end to end
 
 | Thing | State |
 |---|---|
 | Domain russelllee.net | Registered at Cloudflare, live, serving the real site |
 | This repo on GitHub | https://github.com/rujole13/russelllee-net |
 | Cloudflare Pages project | **Git-connected**, `main` branch, output dir `public`. Old direct-upload project deleted |
-| Worker route `/hype*` | Not deployed |
-| Railway Streamlit app | Not deployed |
+| Dashboard repo | https://github.com/rujole13/hype-buyback-dashboard, Phase 1 shell (live tiles only) |
+| Railway Streamlit app | Deployed, auto-redeploys on push to the dashboard repo's `main` |
+| Worker route `/hype*` | Deployed (`hype-proxy`), `ORIGIN` points at the Railway app. Verified in a browser |
+
+Workflow in both repos: branch, push, PR, squash merge, pull. `main` is production.
 
 ---
 
-## Next steps, in order
+## Deploy steps 1 to 5: all completed, kept for reference
 
 ### 1. Create the GitHub repo
 
@@ -107,10 +110,11 @@ Brief downtime, seconds to a minute.
 
 So nobody, including future Russell, wonders which one is real.
 
-### Then, and only then
+### What is next
 
-The dashboard repo, the Railway deploy, and `wrangler deploy` for the Worker. Those are
-steps 5 to 8 of `DEPLOY.md` and none of them should start before the site is live on Git.
+Deployment is finished. Remaining work is building the dashboard itself in
+`hype-buyback-dashboard`: the Historical zone (dbt marts export committed by CI) and the
+Scenario engine. After that, design the real landing page. One item at a time.
 
 ---
 
