@@ -32,7 +32,7 @@ const FALLBACK_HTML = `<!doctype html>
   <h1>The dashboard is waking up</h1>
   <p>The model server did not respond. This page refreshes itself every 15 seconds.</p>
   <p>If it persists, the pipeline and its documentation are on
-     <a href="https://github.com/russelllee/hype-buyback-dashboard">GitHub</a>.</p>
+     <a href="https://github.com/rujole13/hype-buyback-dashboard">GitHub</a>.</p>
 </section></main>
 </body></html>`;
 

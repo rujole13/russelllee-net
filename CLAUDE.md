@@ -49,14 +49,13 @@ not need explained.
 Python 3.10+ is a hard requirement. The source probe script in the dashboard repo uses
 `X | None` union syntax that 3.9 cannot parse.
 
-### Deployment: not started
+### Deployment: static site done, dashboard/Worker/Railway not started
 
 | Thing | State |
 |---|---|
-| Domain russelllee.net | Registered at Cloudflare, live, serving a placeholder |
-| Current Pages project | **Direct Upload.** Holds the custom domain |
-| This repo on GitHub | Not created yet |
-| Git-connected Pages project | Not created yet |
+| Domain russelllee.net | Registered at Cloudflare, live, serving the real site |
+| This repo on GitHub | https://github.com/rujole13/russelllee-net |
+| Cloudflare Pages project | **Git-connected**, `main` branch, output dir `public`. Old direct-upload project deleted |
 | Worker route `/hype*` | Not deployed |
 | Railway Streamlit app | Not deployed |
 
@@ -117,8 +116,11 @@ steps 5 to 8 of `DEPLOY.md` and none of them should start before the site is liv
 
 ## Open questions
 
-- **Is the current placeholder page throwaway, or does he want anything from it preserved?**
-  Asked, not yet answered. Check before step 4 removes it from service.
+None currently.
+
+Resolved: the current placeholder page is throwaway. The real landing page gets designed
+after the Hyperliquid dashboard (`hype-buyback-dashboard`) is actually built, so the
+portfolio page can speak to a finished project rather than a promise.
 
 ---
 
